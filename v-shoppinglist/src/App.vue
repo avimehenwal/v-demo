@@ -3,6 +3,7 @@
     <v-layout justify-center>
       <v-flex xs12 sm12 lg8>
         <Header/>
+        <List/>
         <HelloWorld/>
         <Footer/>
       </v-flex>
@@ -14,13 +15,15 @@
 import HelloWorld from './components/HelloWorld'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import List from './components/List'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     Footer,
-    Header
+    Header,
+    List
   },
   data () {
     return {
