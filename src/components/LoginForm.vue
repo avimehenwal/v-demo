@@ -14,6 +14,7 @@
             type="Password"
             label="Password"
             prepend-icon="lock"
+            append-icon="visibility_off"
           />
         </v-form>
       </v-card-text>
