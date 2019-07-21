@@ -19,6 +19,28 @@
     <p class="subheading">subheading</p>
     <p class="caption">caption to place under image</p>
 
+    <v-btn class="pink white--text">Click Me</v-btn>
+    <v-btn depressed color="pink">Click Me</v-btn>
+    <v-btn dark color="pink">Click Me</v-btn>
+    <v-btn flat color="pink">Click Me</v-btn>
+    <v-btn dark depressed color="pink">
+      <v-icon left>email</v-icon>
+      <span>Email me</span>
+    </v-btn>
+
+    <v-btn small dark depressed color="pink">
+      <v-icon small left>email</v-icon>
+      <span>Email me</span>
+    </v-btn>
+    <v-btn large dark depressed color="pink">
+      <v-icon large left>email</v-icon>
+      <span>Email me</span>
+    </v-btn>
+
+    <v-btn fab dark color="pink">
+      <v-icon>favorite</v-icon>
+    </v-btn>
+
   </div>
 </template>
 
