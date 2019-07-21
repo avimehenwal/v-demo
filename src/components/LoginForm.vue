@@ -4,6 +4,17 @@
       <v-card-title>
         <h1>Login</h1>
       </v-card-title>
+
+      <v-card-text>
+        <v-form>
+          <v-text-field label="Username" />
+          <v-text-field
+            type="Password"
+            label="Password"
+          />
+        </v-form>
+      </v-card-text>
+
     </v-card>
   </div>
 </template>
