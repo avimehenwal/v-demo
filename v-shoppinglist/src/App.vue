@@ -1,8 +1,12 @@
 <template>
   <v-app>
-    <Header/>
-    <HelloWorld/>
-    <Footer/>
+    <v-layout justify-center>
+      <v-flex xs12 sm12 lg8>
+        <Header/>
+        <HelloWorld/>
+        <Footer/>
+      </v-flex>
+    </v-layout>
   </v-app>
 </template>
 
