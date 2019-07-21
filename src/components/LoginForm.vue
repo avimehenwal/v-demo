@@ -1,7 +1,11 @@
 <template>
-    <div>
-        Hello
-    </div>
+  <div>
+    <v-card>
+      <v-card-title>
+        <h1>Login</h1>
+      </v-card-title>
+    </v-card>
+  </div>
 </template>
 
 <script>
