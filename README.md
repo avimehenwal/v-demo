@@ -25,5 +25,8 @@ yarn run test
 yarn run lint
 ```
 
+### Screenshot
+![Demo screenshot](images/non-responsive-login-form.png)
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
