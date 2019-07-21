@@ -15,7 +15,18 @@
 
     <!-- Navigation drawer -->
     <v-navigation-drawer app class="primary" v-model="drawer">
-        <p>test</p>
+        <v-list>
+            <v-list-tile>
+                <v-list-tile-action>
+                    <v-icon dark>dashboard</v-icon>
+                </v-list-tile-action>
+                <v-list-tile-content>
+                    <v-list-tile-title class="white--text">
+                        Dashboard
+                    </v-list-tile-title>
+                </v-list-tile-content>
+            </v-list-tile>
+        </v-list>
     </v-navigation-drawer>
 </nav>
 </template>
@@ -24,6 +35,11 @@
     export default {
         data: () => ({
             drawer: false,
+            links: [
+                { icon: 'dashboard', text: 'Dashboard', route: '/' },
+                { icon: 'folder', text: 'My Projects', route: '/projects' },
+                { icon: 'person', text: 'Team', route: '/team' },
+            ]
         })
 
     }
