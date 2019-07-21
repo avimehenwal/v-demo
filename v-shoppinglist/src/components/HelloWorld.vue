@@ -1,33 +1,35 @@
 <template>
-  <v-container>
-    <v-layout text-xs-center wrap >
-      <v-flex xs12>
+  <v-layout justify-center>
+    <v-flex xs12 sm6>
+      <v-card elevation=20>
+        <v-img
+          src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+          aspect-ratio="2.75"
+        ></v-img>
 
-      </v-flex>
+        <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
+            <div> {{ card_text }} </div>
+          </div>
+        </v-card-title>
 
-      <v-flex mb-4>
-        <h1 class="display-2 font-weight-bold mb-2">
-        </h1>
-        <p class="subheading font-weight-regular">
-        </p>
-      </v-flex>
-
-        <v-layout justify-center>
-
-        </v-layout>
-      </v-flex>
-    </v-layout>
-  </v-container>
+        <v-card-actions>
+          <v-btn flat color="orange">Share</v-btn>
+          <v-btn flat color="orange">Explore</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+  </v-layout>
 </template>
+
 
 <script>
   export default {
-    data: () => ({
-    //
-    })
+    data () {
+      return {
+        card_text: 'Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat.'
+      }
+    }
   }
 </script>
-
-<style>
-
-</style>

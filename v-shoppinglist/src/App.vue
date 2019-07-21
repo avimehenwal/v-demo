@@ -15,11 +15,8 @@
       </v-btn>
     </v-toolbar>
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-
-    <Footer></Footer>
+    <HelloWorld/>
+    <Footer/>
   </v-app>
 </template>
 
