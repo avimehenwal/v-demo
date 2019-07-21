@@ -6,10 +6,14 @@
       </v-card-title>
       <v-card-text>
         <v-form>
-          <v-text-field label="Username" />
+          <v-text-field
+            label="Username"
+            prepend-icon="account_circle"
+          />
           <v-text-field
             type="Password"
             label="Password"
+            prepend-icon="lock"
           />
         </v-form>
       </v-card-text>
