@@ -1,3 +1,4 @@
+// Toolbar - main navigation
 <template>
   <v-toolbar dark color="primary">
     <v-toolbar-side-icon></v-toolbar-side-icon>
