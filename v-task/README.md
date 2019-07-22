@@ -1,5 +1,7 @@
 # v-task
 
+![Demo](public/demo.png)
+
 ## Project setup
 ```
 yarn install
