@@ -26,6 +26,7 @@
 
 <script>
 import format from 'date-fns/format'
+import db from '../fb'
 
 export default {
     data() {
@@ -42,6 +43,18 @@ export default {
         submit() {
           if(this.$refs.form.validate()){
             console.log(this.title, this.content)
+            const project = {
+              title: this.title,
+              content: this.content,
+              due: format(this.due, 'Do MMM YYYY'),
+              person: 'The Net Ninja',
+              status: 'ongoing',
+            }
+
+            // asynchronous method, use Promises
+            db.collection('Projects').add(project).then(() => {
+              console.log('Added to db')
+            })
           }
         }
     },

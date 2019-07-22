@@ -15,8 +15,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
-// avoid warning in console
-db.settings({ timestampsInSnapshots: true });
 
 //export to make it available to other files
 export default db;
