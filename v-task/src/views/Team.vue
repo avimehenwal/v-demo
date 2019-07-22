@@ -9,7 +9,9 @@
         <v-flex xs12 sm6 md4 lg3 v-for="person in team" :key="person.name">
           <v-card flat class="text-xs-center ma-3">
             <v-responsive class="pt-4">
-              images goes here
+              <v-avatar size="100" class="grey lighten-2">
+                <img :src="person.avatar" alt="">
+              </v-avatar>
             </v-responsive>
             <v-card-text>
               <div class="subheading">{{ person.name }}</div>
