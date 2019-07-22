@@ -1,5 +1,5 @@
 <template>
-  <v-dialog max-width="600px">
+  <v-dialog max-width="600px" v-model="dialog">
     <v-btn flat slot="activator" class="success">
       Add new project
     </v-btn>
@@ -17,7 +17,7 @@
               <v-date-picker v-model="due"></v-date-picker>
             </v-menu>
             <v-spacer></v-spacer>
-          <v-btn flat class="success mx-0 mt-3" @click="submit">+ Add Project</v-btn>
+          <v-btn flat :loading="loading" class="success mx-0 mt-3" @click="submit">+ Add Project</v-btn>
         </v-form>
       </v-card-text>
     </v-card>
@@ -36,13 +36,15 @@ export default {
             due: null,
             inputRules: [
               v => v.length >=3 || 'Minimum length is 3 characters'
-            ]
+            ],
+            loading: false,
+            dialog: false,
         }
     },
     methods: {
         submit() {
           if(this.$refs.form.validate()){
-            console.log(this.title, this.content)
+            this.loading = true;
             const project = {
               title: this.title,
               content: this.content,
@@ -53,7 +55,9 @@ export default {
 
             // asynchronous method, use Promises
             db.collection('Projects').add(project).then(() => {
-              console.log('Added to db')
+              console.log('Added to db');
+              this.loading = false;
+              this.dialog = false;
             })
           }
         }
@@ -68,5 +72,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
