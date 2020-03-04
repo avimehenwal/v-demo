@@ -1,5 +1,7 @@
 # v-chart
 
+![SVG output Image](google-chart-svg-image.png)
+
 ## Project setup
 ```
 yarn install
