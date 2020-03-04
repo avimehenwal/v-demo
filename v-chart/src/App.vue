@@ -11,16 +11,18 @@
 
 <script>
 
+const chartData = [
+    ['Year', 'Sales', 'Expenses', 'Profit'],
+    ['2014', 1000, 400, 200],
+    ['2015', 1170, 460, 250],
+    ['2016', 660, 1120, 300],
+    ['2017', 1030, 540, 350]
+];
+
 export default {
   name: 'App',
   data: () => ({
-    chartData: [
-      ['Year', 'Sales', 'Expenses', 'Profit'],
-      ['2014', this.randomNumber(), this.randomNumber(), this.randomNumber()],
-      ['2015', this.randomNumber(), this.randomNumber(), this.randomNumber()],
-      ['2016', this.randomNumber(), this.randomNumber(), this.randomNumber()],
-      ['2017', this.randomNumber(), this.randomNumber(), this.randomNumber()]
-    ],
+    chartData: chartData,
     chartOptions: {
       chart: {
         title: 'Company Performance',
