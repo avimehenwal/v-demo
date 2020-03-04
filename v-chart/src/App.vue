@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    {{chart_data}}
+    {{chart_data}} {{randomNumber()}}
     <GChart
       type="ColumnChart"
       :data="chartData"
@@ -16,17 +16,26 @@ export default {
   data: () => ({
     chartData: [
       ['Year', 'Sales', 'Expenses', 'Profit'],
-      ['2014', 1000, 400, 200],
-      ['2015', 1170, 460, 250],
-      ['2016', 660, 1120, 300],
-      ['2017', 1030, 540, 350]
+      ['2014', this.randomNumber(), this.randomNumber(), this.randomNumber()],
+      ['2015', this.randomNumber(), this.randomNumber(), this.randomNumber()],
+      ['2016', this.randomNumber(), this.randomNumber(), this.randomNumber()],
+      ['2017', this.randomNumber(), this.randomNumber(), this.randomNumber()]
     ],
     chartOptions: {
       chart: {
         title: 'Company Performance',
         subtitle: 'Sales, Expenses, and Profit: 2014-2017',
       }
-    }
+    },
+    random_max: 1000,
+    random_min: 200
   }),
+  methods : {
+    randomNumber : function() {
+      var random_max = 1000;
+      var random_min = 200;
+      return Math.floor(Math.random() * random_max) + random_min;
+    }
+  }
 };
 </script>
