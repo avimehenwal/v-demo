@@ -25,6 +25,26 @@
       <v-btn color="red" @click="reset()" rounded>RESET</v-btn>
       </v-card-actions>
     </v-card>
+    
+    <!-- PIE Chart -->
+     <v-card class="mx-auto" outlined >
+      <v-list-item two-line>
+        <v-list-item-content>
+          <div class="overline mb-4">Reactive data points</div>
+          <v-list-item-title class="headline mb-1"> 
+            <v-chip color="primary" class="font-weight-bold">{{ pieData.length-1}}</v-chip>
+            Data Points</v-list-item-title>
+          <v-list-item-subtitle>
+            Check out cool reactive SVG data visualization
+            <GChart
+              type="PieChart"
+              :data="pieData"
+            />
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+    </v-card>
+   
     <br>
     <ol>
       <li v-for="item in chartData" :key="item">
@@ -55,7 +75,15 @@ export default {
         subtitle: 'Sales, Expenses, and Profit: 2014-2017',
       }
     },
-    start_year: 2015
+    start_year: 2015,
+    pieData: [
+        ['Task', 'Hours per Day'],
+        ['Work',     11],
+        ['Eat',      2],
+        ['Commute',  2],
+        ['Watch TV', 2],
+        ['Sleep',    7]
+    ]
   }),
   methods : {
     randomNumber : function() {
