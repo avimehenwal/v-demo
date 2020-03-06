@@ -30,7 +30,7 @@
       <!-- Reactive Localizations setting -->
       <template v-slot:append>
         <div class="pa-2">
-          <v-list dense height="300">
+          <v-list dense height="250">
             <v-list-item>
               <v-select v-model="color" :items="colors" label="Color" ></v-select>
             </v-list-item>

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Sparklines from '../views/SparklinesView'
+import Layout from '../views/Layout'
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,12 @@ const routes = [
     name: 'Sparklines',
     component: Sparklines,
     icon: 'mdi-view-dashboard'
+  },
+  {
+    path: '/layout',
+    name: 'Layout',
+    component: Layout,
+    icon: 'mdi-aspect-ratio'
   }
 ]
 

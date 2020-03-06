@@ -28,4 +28,6 @@ Reset project
 > Heart of Frontend
 
 * https://vuetifyjs.com/en/getting-started/pre-made-layouts
-*
+* `v-vontainer`
+  * `v-row`
+    * `v-col`
