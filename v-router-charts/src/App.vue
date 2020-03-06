@@ -17,11 +17,8 @@
 
           <v-divider></v-divider>
 
-          <v-list-item v-for="item in items" :key="item.title" link >
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-
+          <v-list-item v-for="item in items" :key="item.title" link :to="item.link">
+            <v-list-item-icon> <v-icon>{{ item.icon }}</v-icon></v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item-content>
@@ -78,9 +75,9 @@ export default {
     return {
       drawer: true,
       items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-        { title: 'Photos', icon: 'mdi-image' },
-        { title: 'About', icon: 'mdi-help-box' }
+        { title: 'Dashboard', icon: 'mdi-view-dashboard', link: '/' },
+        { title: 'Home', icon: 'mdi-home', link: '/home' },
+        { title: 'About', icon: 'mdi-help-box', link: '/about' }
       ],
       color: 'primary',
       colors: [
