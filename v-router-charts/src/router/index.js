@@ -21,6 +21,8 @@ const routes = [
 
 const router = new VueRouter({
   routes
+  // Process all routes at frontend
+  // mode: 'hisatory'
 })
 
 export default router
