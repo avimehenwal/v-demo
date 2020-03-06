@@ -57,7 +57,7 @@
       </v-navigation-drawer>
 
     <v-content>
-      Main App.vue
+      <h1>{{$route.path}}</h1>
       <router-view></router-view>
       <HelloWorld/>
     </v-content>

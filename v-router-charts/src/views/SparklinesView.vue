@@ -1,6 +1,5 @@
 <template>
     <v-container>
-        <h1>{{$router.path}}</h1>
         <Sparklines/>
     </v-container>
 </template>
@@ -13,6 +12,9 @@ export default {
   name: 'SparklinesView',
   components: {
     Sparklines
-  }
+  },
+  date: () => ({
+    url: this.$route.fullPath
+  })
 }
 </script>
