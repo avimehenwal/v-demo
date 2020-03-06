@@ -2,7 +2,7 @@
   <v-app>
     <!-- Navigation Drawer -->
      <v-navigation-drawer v-model="drawer" :color="color" :expand-on-hover="expandOnHover"
-        :mini-variant="miniVariant" :right="right" :src="bg" absolute dark >
+        :mini-variant="miniVariant" :right="right" :src="bg" absolute dark app clipped>
         <v-list dense nav class="py-0">
           <v-list-item two-line :class="miniVariant && 'px-0'">
             <v-list-item-avatar>
@@ -54,10 +54,14 @@
         </div>
       </template>
 
-      </v-navigation-drawer>
+    </v-navigation-drawer>
+
+    <v-app-bar app clipped-right dense color="primary" light short dark>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-toolbar-title>{{$route.path}}</v-toolbar-title>
+    </v-app-bar>
 
     <v-content>
-      <h1>{{$route.path}}</h1>
       <router-view></router-view>
       <HelloWorld/>
     </v-content>
@@ -72,7 +76,9 @@ export default {
   components: {
     HelloWorld
   },
-
+  created () {
+    this.$vuetify.theme.dark = false
+  },
   data () {
     return {
       drawer: true,
