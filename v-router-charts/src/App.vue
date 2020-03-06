@@ -17,10 +17,12 @@
 
           <v-divider></v-divider>
 
-          <v-list-item v-for="item in items" :key="item.title" link :to="item.link">
+          <!-- Navigating links from router -->
+          <v-list-item v-for="item in $router.options.routes" :key="item.name" link
+            :to="item.path" :class="{ active: item.path === $router.currentRoute.path }">
             <v-list-item-icon> <v-icon>{{ item.icon }}</v-icon></v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-list-item-title>{{ item.name }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -74,11 +76,6 @@ export default {
   data () {
     return {
       drawer: true,
-      items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard', link: '/' },
-        { title: 'Home', icon: 'mdi-home', link: '/home' },
-        { title: 'About', icon: 'mdi-help-box', link: '/about' }
-      ],
       color: 'primary',
       colors: [
         'primary',
