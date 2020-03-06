@@ -10,6 +10,7 @@
       </v-col>
     </v-row>
     <v-divider></v-divider>
+    <v-progress-linear v-model="power" color="amber" height="25" reactive ></v-progress-linear>
     <!-- <v-system-bar dark color="info"> -->
       <!-- <v-spacer></v-spacer> -->
       <!-- <v-icon>mdi-wifi-strength-4</v-icon>
@@ -18,7 +19,7 @@
       <span>12:30</span> -->
     <!-- </v-system-bar> -->
     <v-row not gutters fluid>
-      <v-col v-for="n in 3" :key=n>
+      <v-col v-for="n in 3" :key=n sm="4">
         <v-card flat>
           <v-sparkline :fill="fill" :smooth="radius || false" :value="value" auto-draw ></v-sparkline>
         </v-card>
