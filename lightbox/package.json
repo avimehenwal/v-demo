@@ -5,15 +5,22 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode=development",
-    "dev" : "yarn run build && node --harmony dist/${npm_package_name}.js",
+    "dev": "rm -rfv ./dist; yarn run build && node --harmony dist/${npm_package_name}.js; webpack-dev-server",
     "prod": "webpack"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
     "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "html-loader": "^1.2.1",
+    "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "lodash": "^4.17.20"
