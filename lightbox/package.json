@@ -4,7 +4,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "dev": "webpack --mode=development",
+    "start" : "node --harmony dist/${npm_package_name}.js",
+    "prod": "webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
