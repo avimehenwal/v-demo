@@ -4,8 +4,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "webpack --mode=development",
-    "start" : "node --harmony dist/${npm_package_name}.js",
+    "build": "webpack --mode=development",
+    "dev" : "yarn run build && node --harmony dist/${npm_package_name}.js",
     "prod": "webpack"
   },
   "devDependencies": {
